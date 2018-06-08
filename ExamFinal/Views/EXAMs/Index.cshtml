@@ -1,0 +1,65 @@
+﻿@model IEnumerable<ExamFinal.EXAM>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            Exam Subject
+        </th>
+        <th>
+            Start Time
+        </th>
+        <th>
+            Exam Date
+        </th>
+        <th>
+            Exam Duration
+        </th>
+        <th>
+            Class Room
+        </th>
+
+        <th>
+            Fulcuty
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Subject.name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.startTime)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.examDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.examDuration)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Class.name)
+        </td>
+
+        <td>
+            @Html.DisplayFor(modelItem => item.Faculty1.name)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id = item.id }) |
+            @Html.ActionLink("Details", "Details", new { id = item.id }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.id })
+        </td>
+    </tr>
+}
+
+</table>

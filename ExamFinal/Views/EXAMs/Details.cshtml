@@ -1,0 +1,66 @@
+﻿@model ExamFinal.EXAM
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>EXAM</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.startTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.startTime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.examDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.examDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.examDuration)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.examDuration)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Class.name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Class.name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Subject.name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Subject.name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Faculty1.name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Faculty1.name)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
